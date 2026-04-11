@@ -1,0 +1,44 @@
+Importing the libraries
+pandas - for reading the data in csv file
+matplotlib.pyplot - used to draw grahs in python (basic)
+seaborn - raw data into clear and colourful graphs (attractive)
+
+csv file:
+coloumns having in the dataset
+1. age (in yrs)
+2. sex - gender
+3. cp(chest pain type) (4 values)
+types of chest pain
+    value 0 : typical angina
+    value 1: atypical angina
+    value 2: non-anginal pain
+    value 3: asymptomatic
+4. trestbps: resting blood pressure (in mm Hg on admission to the hospital)
+5. chol (cholesterol): serum cholestoral in mg/dl
+6. fbs: - blood sugar level after fasting (fasting blood sugar > 120 mg/dl) (1= ture; 0= false)
+7. restecg: - {ECG results} resting electro cardiographic results
+    value 0: normal
+    value 1: having ST-T wave abnormally (T wave inversions and/r ST elevation or depression of > 0.05mV)
+    value 2: showing probable or definite left ventricular hypertrophy by Estes' riteria
+8. thalach: maximum heart rate achieved
+9. exang: - (chest pain during exercise)exercise induced angina (1=yes; 0=no)
+10. oldpeak = ST depression induced by exercise relative to rest
+11. slope: the slope of the peak exercise ST segment
+    valye 1: upsloping
+    value2: flat
+    value3: downsloping
+12. ca: number of major vessels (0-3) colored by flourscopy
+13. thal(thalassemia): 3= normal; 6= fixed defect; 7 = reversable defect
+14. target(output variable): 0=less chance of heart attact, 1= more chance of heart attack
+
+
+data.head() - shows the first 5 rows
+data.tail() - bottom of the last 5 rows
+data.shape() - print the number of rows and columns in the dataset
+data.info() - shows the column names and data type and non - null values and memory usage
+data.isnull().sum() -  shows the null values in the dataset
+data.duplicated().any - shows the duplicated data
+data.drop_duplicates() - delete the duplicated data
+data.describe() - statistics about the dataset(count, mean, std, min,max,25%,50%,75%)
+data.corr() - correlation matrix
+data.columns - shows the column names
