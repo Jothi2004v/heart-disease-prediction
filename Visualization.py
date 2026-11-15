@@ -35,10 +35,22 @@ def heart_disease_visualization(total_patients,have_hd,no_hd):
     st.plotly_chart(fig,use_container_width=False)
 
 def  age_distribution(df):
-    fig = ff.create_distplot([df["age"]],group_labels=['Age'],bin_size=2,colors=["#6a5acd"])
-    fig.update_layout(height=600,showlegend=True)
-    fig.update_traces(opacity=0.6)
-    st.plotly_chart(fig,use_container_width=False)    
+    fig = go.Figure()
+    fig.add_trace(
+        go.Histogram(
+            x=df["age"],
+            nbinsx=20,
+            name="Age"
+        )
+    )
+    fig.update_layout(
+        title="Age Distribution",
+        xaxis_title="Age",
+        yaxis_title="Number of Patients",
+        bargap=0.1
+    )
+    return fig
+    # st.plotly_chart(fig,use_container_width=False)    
 
 def chest_pain_type(df,cp_map):
     cp_counts = df['cp'].map(cp_map).value_counts()
