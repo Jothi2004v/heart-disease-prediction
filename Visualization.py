@@ -1,8 +1,9 @@
+import plotly.graph_objects as go
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
-import plotly.graph_objects as go
+
 
 
 def data_visualization(total_rows,duplicate_rows,unique_rows):
@@ -35,11 +36,6 @@ def heart_disease_visualization(total_patients,have_hd,no_hd):
     fig.update_traces(textposition="outside")
     fig.update_layout(showlegend=True)
     st.plotly_chart(fig,use_container_width=False)
-
-def  age_distribution(df):
-    import plotly.graph_objects as go
-import streamlit as st
-
 
 def age_distribution(df):
     fig = go.Figure()
